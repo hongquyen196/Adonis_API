@@ -19,3 +19,7 @@ const Route = use('Route')
 Route.get('/', () => {
   return { greeting: 'Hello world in JSON' }
 })
+
+Route.get('/api/log', 'LogController.get');
+Route.post('/api/log', 'LogController.create');
+
