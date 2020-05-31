@@ -1,8 +1,12 @@
 # Guildline install project
 
 1. Copy .env.example and rename to .env
-2. Open "cmd" or "terminal" run command "npm install"
-3. Run command "npm start" to Run application
+2. Open "cmd" or "terminal" run command `npm install`
+3. Open mysql and create schema name "log-api"
+4. Run command `npm run migration` to create table in database
+5. Run application with command `npm run dev`
+
+#Fix bug npm install in macOSX https://stackoverflow.com/questions/14803978/npm-global-path-prefix
 
 # Adonis API application
 
