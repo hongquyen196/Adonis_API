@@ -27,6 +27,17 @@ class LogController {
             data: log
         })
     }
+
+    async test({ request, response }) {
+        const data = await LogBusiness.test()
+        return response.json({
+            meta: {
+                code: 200,
+                message: 'success'
+            },
+            data: data
+        })
+    }
 }
 
 module.exports = LogController

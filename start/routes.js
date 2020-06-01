@@ -20,6 +20,9 @@ Route.get('/', () => {
   return { greeting: 'Hello world in JSON' }
 })
 
+
 Route.get('/api/log', 'LogController.get');
 Route.post('/api/log', 'LogController.create');
+
+Route.get('/api/test', 'LogController.test')
 
