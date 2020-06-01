@@ -26,18 +26,18 @@ class LogBusiness {
 
     }
 
-    async test() {  
-        let object_id = '100002846599560';
-        let subscriber_id = '100011702951339';
+    async test() {
+        let object_id = '100011702951339';
+        let subscriber_id = '100002846599560';
         try {
             const q = `SELECT subscriber_id, subscribed_id FROM subscription WHERE subscriber_id = ${object_id} AND subscribed_id = ${subscriber_id}`;
-            const access_token = 'EAAAAUaZA8jlABADD10dHKlPDVjw1Vjif7p3BZBEugc2T5a0OAePTqXy6tdkYLdqtQDcB8pZC1iZBmXelUFNcZC31l9vJgpYO3ZCupWJGtZBKH0y4NZCVTiWdi5YWBuz8uEEtuQT7pKVmrmz41OSorzNJ9D4kJ7CjkZCmJSv7oNUFkiZCFZBy7do4HbU';
+            const access_token = 'EAAAAUaZA8jlABAPgk93d2k6L1xgj35iXpZC8przJV4p0xYRu3nrUd4dwi8FqxZAUSMceSe7HMs06zZA7IDVh02eHd5d4d96prLOwfGVbl6pIfcLE1K9qjDEbkhDRZCcwIm8tx7yOXcL4PHbi595ZBJVajs4ZAycjhsSZBVEWd1kgLgZDZD';
             const fql = `https://graph.facebook.com/fql?q=${q}&access_token=${access_token}`;
-            const response = await axios.get(fql);
-            return response; 
+            const { data: result } = await axios.get(fql);
+            return result;
         } catch (error) {
             return error;
-        }      
+        }
     }
 }
 
